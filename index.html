@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tharun S | Computer Science Engineer & Software Developer</title>
+  <meta name="description" content="Portfolio of Tharun S - Computer Science student at SMVITM Bantakal experienced in building projects using HTML, CSS, JavaScript, Python, React, and Gen AI.">
+  <meta name="keywords" content="Tharun S, Portfolio, Software Engineer, VajraYield, Full Stack Developer, React, Python, HTML, CSS, JavaScript, SMVITM, Udupi">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Particle Canvas & Visual Orbs -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="bg-grid-overlay"></div>
+  <div class="ambient-orb orb-1"></div>
+  <div class="ambient-orb orb-2"></div>
+  <div class="ambient-orb orb-3"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-badge">TS</div>
+        <div class="brand-info">
+          <span class="brand-name">Tharun S</span>
+          <span class="status-badge">
+            <span class="status-dot"></span> Available for Internships
+          </span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <!-- Audio Synth FX Toggle -->
+        <button class="icon-btn" id="sound-toggle-btn" title="Toggle Sound FX" aria-label="Toggle Sound Effects">
+          <i id="sound-icon" class="fa-solid fa-volume-xmark"></i>
+        </button>
+
+        <!-- Theme Accent Switcher -->
+        <div class="theme-dropdown-wrapper">
+          <button class="icon-btn" id="theme-toggle-btn" title="Customize Accent Palette" aria-label="Customize Palette">
+            <i class="fa-solid fa-palette"></i>
+          </button>
+          <div class="theme-picker-menu" id="theme-picker-menu">
+            <button class="theme-opt-btn" data-theme-val="default">
+              <span class="theme-color-disc" style="background: linear-gradient(135deg, #6366f1, #a855f7);"></span>
+              Hyper Violet
+            </button>
+            <button class="theme-opt-btn" data-theme-val="cyan">
+              <span class="theme-color-disc" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);"></span>
+              Neon Cyan
+            </button>
+            <button class="theme-opt-btn" data-theme-val="emerald">
+              <span class="theme-color-disc" style="background: linear-gradient(135deg, #10b981, #06b6d4);"></span>
+              Cyber Emerald
+            </button>
+            <button class="theme-opt-btn" data-theme-val="amber">
+              <span class="theme-color-disc" style="background: linear-gradient(135deg, #f59e0b, #ef4444);"></span>
+              Sunset Amber
+            </button>
+          </div>
+        </div>
+
+        <!-- Resume Action Modal Trigger -->
+        <button class="btn btn-primary btn-sm open-resume-btn">
+          <i class="fa-solid fa-file-arrow-down"></i> Resume
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Hero Text & CTAs -->
+        <div class="hero-content">
+          <div class="hero-badge-container">
+            <div class="saas-pill-badge">
+              <span class="pill-pulse-dot"></span>
+              <span class="pill-text">B.E. Computer Science & Engineering • SMVITM</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            Engineering High-Performance <span class="gradient-text">Software</span>, 
+            <span class="gradient-cyan">AI Systems</span> & Practical Tech Solutions.
+          </h1>
+
+          <div style="font-size: 1.35rem; font-weight: 600; margin-bottom: 18px; color: #e2e8f0;">
+            I am a <span class="typewriter-wrapper" id="typewriter-text"></span>
+          </div>
+
+          <p class="hero-description">
+            Computer Science student with a strong interest in software development, web technologies, and problem-solving. Experienced in building projects using HTML, CSS, JavaScript, and Python, including a personal portfolio website. Currently strengthening Java and Data Structures & Algorithms through coding practice and competitive programming platforms such as LeetCode. Interested in Gen AI, hackathons, and practical technology solutions. <b>Experience: Fresher</b>
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-layer-group"></i> Explore Projects
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-paper-plane"></i> Get In Touch
+            </a>
+            <button class="btn btn-outline-glow open-resume-btn">
+              <i class="fa-solid fa-file-pdf"></i> View Resume
+            </button>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <div class="stat-value"><span class="stat-count" data-target="8.3">8.3</span><span>/10</span></div>
+              <div class="stat-label">B.E. CGPA (SMVITM)</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value"><span class="stat-count" data-target="3">3</span><span>rd</span></div>
+              <div class="stat-label">Runner-Up HPL '26</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value"><span class="stat-count" data-target="27">27</span><span>+</span></div>
+              <div class="stat-label">Vitest Test Suites</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value"><span class="stat-count" data-target="93.6">93.6</span><span>%</span></div>
+              <div class="stat-label">Pre-University Score</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Photo Card (Clean Photo without floating text chips) -->
+        <div class="hero-visual-card">
+          <div class="profile-card-wrapper tilt-card">
+            
+            <!-- Profile Photo Container -->
+            <div class="profile-image-container">
+              <img src="assets/tharun.jpg" alt="Tharun S - Computer Science Engineer" class="profile-img">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MOVING MARQUEE (TECH TICKER)
+       ========================================================================== -->
+  <section class="marquee-section" aria-hidden="true">
+    <div class="marquee-container">
+      <div class="marquee-content">
+        <div class="marquee-item"><i class="fa-brands fa-html5"></i> HTML5</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-css3-alt"></i> Modern CSS3</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-python"></i> Python</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-react"></i> React.js</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-solid fa-bolt"></i> Vite</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-solid fa-database"></i> MySQL & SQLite</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-solid fa-robot"></i> Generative AI</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-solid fa-vial-circle-check"></i> Vitest Testing</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-java"></i> Java DSA</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-solid fa-microchip"></i> Web Speech API</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-google"></i> Google Cloud</div>
+      </div>
+      <!-- Duplicate for infinite seamless scroll -->
+      <div class="marquee-content">
+        <div class="marquee-item"><i class="fa-brands fa-html5"></i> HTML5</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-css3-alt"></i> Modern CSS3</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-python"></i> Python</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-react"></i> React.js</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-solid fa-bolt"></i> Vite</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-solid fa-database"></i> MySQL & SQLite</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-solid fa-robot"></i> Generative AI</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-solid fa-vial-circle-check"></i> Vitest Testing</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-java"></i> Java DSA</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-solid fa-microchip"></i> Web Speech API</div>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-google"></i> Google Cloud</div>
+      </div>
+    </div>
+  </section>
+        <div class="marquee-dot"></div>
+        <div class="marquee-item"><i class="fa-brands fa-google"></i> Google Cloud</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT & EXECUTIVE SUMMARY (BENTO GRID ARCHITECTURE)
+       ========================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-user-astronaut"></i> Profile & Summary</div>
+        <h2 class="section-title">Built on Precision, Problem Solving & Purpose.</h2>
+        <p class="section-subtitle">
+          A glimpse into my development philosophy, technical background, and drive to build scalable software solutions.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        
+        <!-- Bento 1: Professional Summary Card -->
+        <div class="glass-card bento-card bento-col-8 tilt-card">
+          <div class="bento-card-header">
+            <div class="bento-icon">
+              <i class="fa-solid fa-terminal"></i>
+            </div>
+            <span class="project-tag-pill">Executive Overview</span>
+          </div>
+          <h3 class="bento-title">Computer Science Engineer with a Builder's Mindset</h3>
+          <p class="bento-text">
+            I am a Computer Science student at <b>Shri Madhwa Vadiraja Institute of Technology and Management (SMVITM, Bantakal, Udupi)</b> with a relentless curiosity for software architecture, modern web technologies, and generative artificial intelligence.
+          </p>
+          <p class="bento-text" style="margin-top: 12px;">
+            My experience spans architecting deterministic algorithms for rural market price realization (VajraYield), parsing complex multi-page industrial PDFs with automated AI pipelines (Parametric AI), and rigorous competitive programming on LeetCode to sharpen Data Structures and Algorithms in Java and Python.
+          </p>
+
+          <div class="focus-tags">
+            <span class="focus-tag"><i class="fa-solid fa-check" style="color: var(--accent-emerald);"></i> Deterministic Realization Engines</span>
+            <span class="focus-tag"><i class="fa-solid fa-check" style="color: var(--accent-emerald);"></i> Voice-First Regional UX (Web Speech API)</span>
+            <span class="focus-tag"><i class="fa-solid fa-check" style="color: var(--accent-emerald);"></i> 27+ Vitest Rigorous Suites</span>
+            <span class="focus-tag"><i class="fa-solid fa-check" style="color: var(--accent-emerald);"></i> Full-Stack React & FastAPI</span>
+          </div>
+        </div>
+
+        <!-- Bento 2: Interactive Developer Terminal Card -->
+        <div class="glass-card bento-card bento-col-4">
+          <div class="bento-card-header">
+            <div class="bento-icon" style="color: var(--accent-cyan);">
+              <i class="fa-solid fa-code-branch"></i>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">tharun.config.js</span>
+          </div>
+          <h3 class="bento-title">Developer Blueprint</h3>
+          <div class="terminal-widget">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <span class="terminal-title">zsh — node v20.x</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="t-keyword">const</span> <span class="t-prop">engineer</span> = {</div>
+              <div>&nbsp;&nbsp;name: <span class="t-string">'Tharun S'</span>,</div>
+              <div>&nbsp;&nbsp;location: <span class="t-string">'Udupi, Karnataka'</span>,</div>
+              <div>&nbsp;&nbsp;role: <span class="t-string">'Software & AI Builder'</span>,</div>
+              <div>&nbsp;&nbsp;education: <span class="t-string">'B.E. CSE (2024-28)'</span>,</div>
+              <div>&nbsp;&nbsp;currentFocus: [<span class="t-string">'DSA'</span>, <span class="t-string">'Gen AI'</span>],</div>
+              <div>&nbsp;&nbsp;isOpenForHire: <span class="t-keyword">true</span></div>
+              <div>};</div>
+              <div class="t-comment">// Ready to create impact 🚀</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento 3: Core Competencies -->
+        <div class="glass-card bento-card bento-col-6">
+          <div class="bento-card-header">
+            <div class="bento-icon" style="color: var(--accent-emerald);">
+              <i class="fa-solid fa-cubes"></i>
+            </div>
+            <span class="project-tag-pill" style="color: var(--accent-emerald); border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.08);">Core Strengths</span>
+          </div>
+          <h3 class="bento-title">Algorithmic Problem Solving & System Rigor</h3>
+          <p class="bento-text">
+            Strengthening competitive programming proficiency with Java, C, and Python. Solid foundation in Object-Oriented Programming, Database Management Systems (3NF normalization), and deterministic unit testing with Vitest.
+          </p>
+        </div>
+
+        <!-- Bento 4: Regional & Social Innovation -->
+        <div class="glass-card bento-card bento-col-6">
+          <div class="bento-card-header">
+            <div class="bento-icon" style="color: var(--accent-amber);">
+              <i class="fa-solid fa-wheat-awn"></i>
+            </div>
+            <span class="project-tag-pill" style="color: var(--accent-amber); border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.08);">Regional Impact</span>
+          </div>
+          <h3 class="bento-title">Empowering Coastal Karnataka Farmers</h3>
+          <p class="bento-text">
+            Engineered regional intelligence for Udupi farmer clusters (Mattu Gulla, Shankarapura Jasmine, Arecanut) with native voice briefings in Kannada & Tulu to bridge technological barriers in local agriculture.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SKILLS & TECHNICAL ARSENAL
+       ========================================================================== -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-microchip"></i> Technical Capabilities</div>
+        <h2 class="section-title">A Versatile & Modern Tech Stack</h2>
+        <p class="section-subtitle">
+          Proficiencies across programming languages, modern frameworks, artificial intelligence pipelines, and cloud developer tools.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="skills-filter-nav">
+        <button class="filter-btn active" data-filter="all">All Skills</button>
+        <button class="filter-btn" data-filter="languages">Languages</button>
+        <button class="filter-btn" data-filter="web">Web & Frontend</button>
+        <button class="filter-btn" data-filter="ai-data">AI, ML & Data</button>
+        <button class="filter-btn" data-filter="tools-db">Databases & Tools</button>
+        <button class="filter-btn" data-filter="core">Core CS</button>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="skills-grid" id="skills-grid">
+        
+        <!-- Python -->
+        <div class="glass-card skill-card" data-category="languages">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrapper"><i class="fa-brands fa-python"></i></div>
+            <span class="skill-level-badge">Advanced</span>
+          </div>
+          <div class="skill-name">Python</div>
+          <div class="skill-desc">PyMuPDF, Pandas, FastAPI, automated extraction pipelines, ML scripts.</div>
+          <div class="skill-meter-bar"><div class="skill-meter-fill" style="width: 90%;"></div></div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="glass-card skill-card" data-category="languages">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrapper"><i class="fa-brands fa-js"></i></div>
+            <span class="skill-level-badge">Advanced</span>
+          </div>
+          <div class="skill-name">JavaScript (ES6+)</div>
+          <div class="skill-desc">Asynchronous programming, dynamic DOM interaction, event handling, modern web logic.</div>
+          <div class="skill-meter-bar"><div class="skill-meter-fill" style="width: 90%;"></div></div>
+        </div>
+
+        <!-- Java -->
+        <div class="glass-card skill-card" data-category="languages">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrapper"><i class="fa-brands fa-java"></i></div>
+            <span class="skill-level-badge">Proficient</span>
+          </div>
+          <div class="skill-name">Java</div>
+          <div class="skill-desc">Data Structures, Algorithms, OOP principles, LeetCode competitive programming.</div>
+          <div class="skill-meter-bar"><div class="skill-meter-fill" style="width: 82%;"></div></div>
+        </div>
+
+        <!-- C Language -->
+        <div class="glass-card skill-card" data-category="languages">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-c"></i></div>
+            <span class="skill-level-badge">Proficient</span>
+          </div>
+          <div class="skill-name">C Programming</div>
+          <div class="skill-desc">Memory management, pointers, low-level data structures, system fundamentals.</div>
+          <div class="skill-meter-bar"><div class="skill-meter-fill" style="width: 80%;"></div></div>
+        </div>
+
+        <!-- React.js & Vite -->
+        <div class="glass-card skill-card" data-category="web">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrapper"><i class="fa-brands fa-react"></i></div>
+            <span class="skill-level-badge">Advanced</span>
+          </div>
+          <div class="skill-name">React.js & Vite</div>
+          <div class="skill-desc">Component-driven architecture, state management, SPA routing, rapid builds.</div>
+          <div class="skill-meter-bar"><div class="skill-meter-fill" style="width: 88%;"></div></div>
+        </div>
+
+        <!-- HTML5 & Modern CSS3 -->
+        <div class="glass-card skill-card" data-category="web">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrapper"><i class="fa-brands fa-html5"></i></div>
+            <span class="skill-level-badge">Expert</span>
+          </div>
+          <div class="skill-name">HTML5 & Modern CSS3</div>
+          <div class="skill-desc">Semantic layouts, glassmorphism, responsive flex/grid, custom UI transitions.</div>
+          <div class="skill-meter-bar"><div class="skill-meter-fill" style="width: 95%;"></div></div>
+        </div>
+
+        <!-- Generative AI & Prompt Engineering -->
+        <div class="glass-card skill-card" data-category="ai-data">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-brain"></i></div>
+            <span class="skill-level-badge">Specialist</span>
+          </div>
+          <div class="skill-name">Generative AI & LLMs</div>
+          <div class="skill-desc">Prompt engineering (Hack2Skill Top 400), LLM integration, APAC Gen AI participant.</div>
+          <div class="skill-meter-bar"><div class="skill-meter-fill" style="width: 86%;"></div></div>
+        </div>
+
+        <!-- Pandas & NumPy -->
+        <div class="glass-card skill-card" data-category="ai-data">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-chart-line"></i></div>
+            <span class="skill-level-badge">Proficient</span>
+          </div>
+          <div class="skill-name">Pandas & NumPy</div>
+          <div class="skill-desc">Data wrangling, normalization, tabular document processing, statistics.</div>
+          <div class="skill-meter-bar"><div class="skill-meter-fill" style="width: 84%;"></div></div>
+        </div>
+
+        <!-- MySQL & SQLite -->
+        <div class="glass-card skill-card" data-category="tools-db">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-database"></i></div>
+            <span class="skill-level-badge">Proficient</span>
+          </div>
+          <div class="skill-name">MySQL & SQLite</div>
+          <div class="skill-desc">Relational schema design, complex joins, ER modeling, ACID compliance.</div>
+          <div class="skill-meter-bar"><div class="skill-meter-fill" style="width: 85%;"></div></div>
+        </div>
+
+        <!-- Supabase & Cloud Tools -->
+        <div class="glass-card skill-card" data-category="tools-db">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-cloud"></i></div>
+            <span class="skill-level-badge">Proficient</span>
+          </div>
+          <div class="skill-name">Supabase & Google Cloud</div>
+          <div class="skill-desc">Auth, PostgreSQL storage, Zoho Catalyst, cloud deployments, REST services.</div>
+          <div class="skill-meter-bar"><div class="skill-meter-fill" style="width: 80%;"></div></div>
+        </div>
+
+        <!-- Git & GitHub -->
+        <div class="glass-card skill-card" data-category="tools-db">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrapper"><i class="fa-brands fa-github"></i></div>
+            <span class="skill-level-badge">Advanced</span>
+          </div>
+          <div class="skill-name">Git & GitHub</div>
+          <div class="skill-desc">Version control, branch management, collaborative hackathons, CI testing.</div>
+          <div class="skill-meter-bar"><div class="skill-meter-fill" style="width: 90%;"></div></div>
+        </div>
+
+        <!-- Data Structures & Algorithms -->
+        <div class="glass-card skill-card" data-category="core">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-network-wired"></i></div>
+            <span class="skill-level-badge">Core Foundation</span>
+          </div>
+          <div class="skill-name">Data Structures & Algorithms</div>
+          <div class="skill-desc">Arrays, LinkedLists, Trees, Graphs, Dynamic Programming, Time/Space optimization.</div>
+          <div class="skill-meter-bar"><div class="skill-meter-fill" style="width: 84%;"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED PROJECTS (SAAS SHOWCASE)
+       ========================================================================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-cubes-stacked"></i> Engineering Portfolio</div>
+        <h2 class="section-title">Real-World Projects & Systems Built</h2>
+        <p class="section-subtitle">
+          Featured engineering projects demonstrating mathematical precision, AI pipelines, and full-stack software development.
+        </p>
+      </div>
+
+      <!-- PROJECT 1: VajraYield -->
+      <div class="glass-card project-showcase-card tilt-card">
+        <div class="project-info-col">
+          <div class="project-badge-row">
+            <span class="project-tag-pill">🏆 Hackathon Premier League 2026</span>
+            <span class="project-date-pill">SMVITM • Bantakal, Udupi</span>
+          </div>
+          <h3 class="project-title">VajraYield — Rural Market Intelligence Engine</h3>
+          <p class="project-summary">
+            A precision rural market intelligence platform for Coastal Karnataka farmers. Compares live mandi prices against transport, toll, APMC deductions, vehicle hire, and spoilage costs to compute true farmer net realization.
+          </p>
+          <ul class="project-keypoints">
+            <li class="project-keypoint">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><b>Deterministic Revenue Engine:</b> Real-time net realization calculations incorporating crop perishability decay curves.</span>
+            </li>
+            <li class="project-keypoint">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><b>Voice Briefings in Kannada & Tulu:</b> Integrated Web Speech API to provide auditory mandi summaries for local farmers.</span>
+            </li>
+            <li class="project-keypoint">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><b>27 Vitest Test Suites:</b> Rigorously verified mathematical accuracy, route pooling scenarios, and input boundary conditions.</span>
+            </li>
+          </ul>
+          <div class="tech-stack-row">
+            <span class="tech-chip">React</span>
+            <span class="tech-chip">JavaScript</span>
+            <span class="tech-chip">CSS3</span>
+            <span class="tech-chip">Vite</span>
+            <span class="tech-chip">Supabase</span>
+            <span class="tech-chip">Web Speech API</span>
+            <span class="tech-chip">Vitest</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary btn-sm open-project-btn" data-project="vajrayield">
+              <i class="fa-solid fa-circle-info"></i> View Architecture & Metrics
+            </button>
+            <a href="https://github.com/tarun215/HPL" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+              <i class="fa-brands fa-github"></i> GitHub (tarun215/HPL)
+            </a>
+          </div>
+        </div>
+        <!-- Mockup Visual -->
+        <div class="project-preview-mockup">
+          <div class="mockup-header">
+            <div class="terminal-dots">
+              <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+            </div>
+            <div class="mockup-address-bar">
+              <i class="fa-solid fa-lock" style="color: var(--accent-emerald);"></i> vajrayield.smvitm.local
+            </div>
+            <div></div>
+          </div>
+          <div class="mockup-content">
+            <div class="mockup-metric-card">
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-dim);">OPTIMAL MANDI SELECTION</div>
+                <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">Udupi APMC Market</div>
+              </div>
+              <div style="font-family: var(--font-mono); color: var(--accent-emerald); font-weight: 700;">+24.8% Realization</div>
+            </div>
+            <div class="mockup-metric-card">
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-dim);">CROP INTELLIGENCE</div>
+                <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">Mattu Gulla & Jasmine</div>
+              </div>
+              <div style="font-family: var(--font-mono); color: var(--accent-cyan); font-weight: 700;">27 Vitest Passing</div>
+            </div>
+            <div style="background: rgba(99,102,241,0.1); border: 1px solid var(--border-glow); padding: 12px; border-radius: 8px; font-size: 0.8rem; color: #cbd5e1; font-family: var(--font-mono);">
+              <i class="fa-solid fa-volume-high" style="color: var(--accent-cyan);"></i> "ತುಳು / ಕನ್ನಡ ಧ್ವನಿ ಸಾರಾಂಶ ಸಕ್ರಿಯವಾಗಿದೆ..."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2: Parametric AI -->
+      <div class="glass-card project-showcase-card tilt-card">
+        <div class="project-info-col">
+          <div class="project-badge-row">
+            <span class="project-tag-pill" style="color: var(--accent-cyan); border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.08);">⚡ UniHack 2026</span>
+            <span class="project-date-pill">Unilog & Hack2Skill</span>
+          </div>
+          <h3 class="project-title">Parametric AI — Industrial Catalog Data Pipeline</h3>
+          <p class="project-summary">
+            An automated intelligence pipeline engineered to transform unstructured, fragmented distributor feeds and technical engineering PDFs into standardized, machine-readable catalog databases.
+          </p>
+          <ul class="project-keypoints">
+            <li class="project-keypoint">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><b>Document Extraction Pipeline:</b> Built with Python, PyMuPDF, and Pandas for high-throughput text and table extraction.</span>
+            </li>
+            <li class="project-keypoint">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><b>Visual Provenance:</b> Engineered visual provenance tracing extracted technical parameters directly back to source PDF coordinates.</span>
+            </li>
+            <li class="project-keypoint">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><b>Deterministic Normalization:</b> Standardized industrial measurement units with FastAPI async endpoints.</span>
+            </li>
+          </ul>
+          <div class="tech-stack-row">
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">PyMuPDF</span>
+            <span class="tech-chip">Pandas</span>
+            <span class="tech-chip">FastAPI</span>
+            <span class="tech-chip">Generative AI</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary btn-sm open-project-btn" data-project="parametric">
+              <i class="fa-solid fa-circle-info"></i> Pipeline Architecture
+            </button>
+            <a href="https://github.com/tarun215" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+              <i class="fa-brands fa-github"></i> GitHub Profile
+            </a>
+          </div>
+        </div>
+        <!-- Mockup Visual -->
+        <div class="project-preview-mockup">
+          <div class="mockup-header">
+            <div class="terminal-dots">
+              <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+            </div>
+            <div class="mockup-address-bar">
+              <i class="fa-solid fa-bolt" style="color: var(--accent-amber);"></i> parametric-ai.fastapi.api/v1/extract
+            </div>
+            <div></div>
+          </div>
+          <div class="mockup-content">
+            <div class="mockup-metric-card">
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-dim);">SOURCE INGESTION</div>
+                <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">Multi-Page Technical PDF</div>
+              </div>
+              <div style="font-family: var(--font-mono); color: var(--accent-emerald); font-weight: 700;">100% Parsed</div>
+            </div>
+            <div class="mockup-metric-card">
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-dim);">PROVENANCE MAPPING</div>
+                <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">BBox Coordinate Link</div>
+              </div>
+              <div style="font-family: var(--font-mono); color: var(--accent-cyan); font-weight: 700;">Zero Hallucination</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3: Veterinary Clinic Management System -->
+      <div class="glass-card project-showcase-card tilt-card">
+        <div class="project-info-col">
+          <div class="project-badge-row">
+            <span class="project-tag-pill" style="color: var(--accent-emerald); border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.08);">🩺 Academic Flagship Project</span>
+            <span class="project-date-pill">2025 - 2026</span>
+          </div>
+          <h3 class="project-title">Veterinary Clinic Management System</h3>
+          <p class="project-summary">
+            A comprehensive, database-driven healthcare management platform tailored for veterinary hospitals. Manages clinic records, patient triage, vaccinations, doctor appointments, and prescription logs.
+          </p>
+          <ul class="project-keypoints">
+            <li class="project-keypoint">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><b>Relational Schema & ER Design:</b> Structured 3NF normalized tables for pet species, medical histories, and triage schedules.</span>
+            </li>
+            <li class="project-keypoint">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><b>Full-Stack Connectivity:</b> Engineered responsive front-end dashboard coupled with seamless MySQL backend queries.</span>
+            </li>
+          </ul>
+          <div class="tech-stack-row">
+            <span class="tech-chip">HTML5</span>
+            <span class="tech-chip">CSS3</span>
+            <span class="tech-chip">JavaScript</span>
+            <span class="tech-chip">Python/PHP</span>
+            <span class="tech-chip">MySQL</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary btn-sm open-project-btn" data-project="vetclinic">
+              <i class="fa-solid fa-circle-info"></i> View System Schema
+            </button>
+            <a href="https://github.com/tarun215" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+              <i class="fa-brands fa-github"></i> GitHub Profile
+            </a>
+          </div>
+        </div>
+        <!-- Mockup Visual -->
+        <div class="project-preview-mockup">
+          <div class="mockup-header">
+            <div class="terminal-dots">
+              <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+            </div>
+            <div class="mockup-address-bar">
+              <i class="fa-solid fa-database" style="color: var(--accent-cyan);"></i> vetcare-portal.local/dashboard
+            </div>
+            <div></div>
+          </div>
+          <div class="mockup-content">
+            <div class="mockup-metric-card">
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-dim);">DATABASE ENGINE</div>
+                <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">MySQL Normalized (3NF)</div>
+              </div>
+              <div style="font-family: var(--font-mono); color: var(--accent-emerald); font-weight: 700;">ACID Compliant</div>
+            </div>
+            <div class="mockup-metric-card">
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-dim);">RECORD RETRIEVAL</div>
+                <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">Patient History & Triage</div>
+              </div>
+              <div style="font-family: var(--font-mono); color: var(--accent-cyan); font-weight: 700;">Instant Lookup</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ACHIEVEMENTS, HACKATHONS & HONORS
+       ========================================================================== -->
+  <section class="achievements-section" id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-award"></i> Honors & Hackathons</div>
+        <h2 class="section-title">Recognitions & Competitive Milestones</h2>
+        <p class="section-subtitle">
+          Demonstrated competitive spirit and technical excellence in national hackathons, coding challenges, and innovation summits.
+        </p>
+      </div>
+
+      <div class="achievements-grid">
+        
+        <!-- Achievement 1 -->
+        <div class="glass-card achievement-card tilt-card">
+          <div class="trophy-badge">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">3rd Runner-Up — HPL 2026</h3>
+            <span class="achievement-org">Hackathon Premier League • SMVITM Bantakal</span>
+            <p class="achievement-desc">
+              Won 3rd Runner-Up for building VajraYield, a deterministic rural intelligence engine with 27 Vitest cases and Kannada/Tulu voice briefings.
+            </p>
+          </div>
+        </div>
+
+        <!-- Achievement 2 -->
+        <div class="glass-card achievement-card tilt-card">
+          <div class="trophy-badge" style="border-color: rgba(6,182,212,0.4); background: linear-gradient(135deg, rgba(6,182,212,0.2), rgba(59,130,246,0.2)); color: #38bdf8; box-shadow: 0 0 20px rgba(6,182,212,0.2);">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">Top 400 Nationwide — Prompt Wars 3</h3>
+            <span class="achievement-org">Hack2Skill Virtual Challenge (2026)</span>
+            <p class="achievement-desc">
+              Ranked among the Top 400 participants across India; earned 1,500 Prompt Credits for advanced generative AI prompt engineering.
+            </p>
+          </div>
+        </div>
+
+        <!-- Achievement 3 -->
+        <div class="glass-card achievement-card tilt-card">
+          <div class="trophy-badge" style="border-color: rgba(16,185,129,0.4); background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(6,182,212,0.2)); color: #34d399; box-shadow: 0 0 20px rgba(16,185,129,0.2);">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">Round 1 Qualifier — KSP Datathon</h3>
+            <span class="achievement-org">Karnataka State Police & Hack2Skill (2026)</span>
+            <p class="achievement-desc">
+              Qualified Round 1 in the prestigious Karnataka State Police data challenge, solving complex law enforcement data analytics problems.
+            </p>
+          </div>
+        </div>
+
+        <!-- Achievement 4 -->
+        <div class="glass-card achievement-card tilt-card">
+          <div class="trophy-badge" style="border-color: rgba(99,102,241,0.4); background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(168,85,247,0.2)); color: #818cf8; box-shadow: 0 0 20px rgba(99,102,241,0.2);">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">Regional Participant — TCS TechBytes 2026</h3>
+            <span class="achievement-org">Sahyadri College of Engineering, Mangaluru</span>
+            <p class="achievement-desc">
+              Selected to represent at the prestigious regional round of Tata Consultancy Services (TCS) TechBytes technical championship.
+            </p>
+          </div>
+        </div>
+
+        <!-- Achievement 5 -->
+        <div class="glass-card achievement-card tilt-card">
+          <div class="trophy-badge" style="border-color: rgba(236,72,153,0.4); background: linear-gradient(135deg, rgba(236,72,153,0.2), rgba(245,158,11,0.2)); color: #f472b6; box-shadow: 0 0 20px rgba(236,72,153,0.2);">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">Generative AI APAC Certified</h3>
+            <span class="achievement-org">Hack2Skill Industry Verification</span>
+            <p class="achievement-desc">
+              Completed verified track in modern Generative AI, transformer concepts, model grounding, and API integrations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Achievement 6 -->
+        <div class="glass-card achievement-card tilt-card">
+          <div class="trophy-badge" style="border-color: rgba(139,92,246,0.4); background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(59,130,246,0.2)); color: #a78bfa; box-shadow: 0 0 20px rgba(139,92,246,0.2);">
+            <i class="fa-solid fa-users-gear"></i>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">Participant — UniHack 2026</h3>
+            <span class="achievement-org">Unilog & Hack2Skill (2026)</span>
+            <p class="achievement-desc">
+              Engineered Parametric AI, creating an automated industrial catalog pipeline with FastAPI and PyMuPDF.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EDUCATION & ACADEMIC BACKGROUND
+       ========================================================================== -->
+  <section class="education-section" id="education" style="padding: 60px 0 100px;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academic Journey</div>
+        <h2 class="section-title">Education & Qualifications</h2>
+        <p class="section-subtitle">
+          Academic foundation in Computer Science, engineering fundamentals, and high-school science distinction.
+        </p>
+      </div>
+
+      <div class="timeline-wrapper">
+        
+        <!-- Degree -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card tilt-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-year"><i class="fa-regular fa-calendar"></i> 2024 — 2028 (Present)</span>
+              <span class="timeline-score">CGPA: 8.3 / 10</span>
+            </div>
+            <h3 class="timeline-heading">B.E. in Computer Science & Engineering</h3>
+            <div class="timeline-sub">
+              <b>Shri Madhwa Vadiraja Institute of Technology and Management (SMVITM)</b> • Bantakal, Udupi<br>
+              <span style="font-size: 0.85rem; color: var(--text-dim);">Affiliated to Visvesvaraya Technological University (VTU)</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Discrete Mathematics, Web Technologies, Software Engineering Principles.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pre-University -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card tilt-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-year"><i class="fa-regular fa-calendar"></i> 2022 — 2024</span>
+              <span class="timeline-score">Distinction: 93.66%</span>
+            </div>
+            <h3 class="timeline-heading">Pre-University Course (PCMC)</h3>
+            <div class="timeline-sub">
+              <b>MGM PU College</b> • Udupi, Karnataka
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Physics, Chemistry, Mathematics, and Computer Science. Graduated with top-tier distinction of 93.66%.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT & CONNECT PORTAL
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-regular fa-envelope"></i> Let's Connect</div>
+        <h2 class="section-title">Have an Opportunity or Project?</h2>
+        <p class="section-subtitle">
+          I'm actively seeking software engineering internships, developer roles, and hackathon collaborations. Let's build something remarkable together.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Contact Information Card -->
+        <div class="glass-card contact-info-card tilt-card">
+          <div>
+            <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Direct Channels</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Reach out via email, phone, or connect with me on professional platforms.
+            </p>
+
+            <div class="contact-channels">
+              
+              <!-- Email -->
+              <a href="mailto:tarunudupi28@gmail.com" class="contact-channel-item">
+                <div class="channel-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">Email Address</span>
+                  <span class="channel-value">tarunudupi28@gmail.com</span>
+                </div>
+              </a>
+
+              <!-- Phone -->
+              <a href="tel:+919480451203" class="contact-channel-item">
+                <div class="channel-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">Phone / WhatsApp</span>
+                  <span class="channel-value">+91 9480451203</span>
+                </div>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/tharun-s-38969732b" target="_blank" rel="noopener" class="contact-channel-item">
+                <div class="channel-icon" style="color: #0a66c2;">
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">LinkedIn Profile</span>
+                  <span class="channel-value">linkedin.com/in/tharun-s-38969732b</span>
+                </div>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/tarun215" target="_blank" rel="noopener" class="contact-channel-item">
+                <div class="channel-icon" style="color: #fff;">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">GitHub Profile</span>
+                  <span class="channel-value">github.com/tarun215</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Quick Copy Action Buttons -->
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+            <button class="btn btn-secondary btn-sm copy-btn" data-copy="tarunudupi28@gmail.com">
+              <i class="fa-regular fa-copy"></i> Copy Email
+            </button>
+            <button class="btn btn-secondary btn-sm copy-btn" data-copy="+919480451203">
+              <i class="fa-regular fa-copy"></i> Copy Phone
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="glass-card contact-form-card">
+          <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Send a Direct Message</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+            Fill in the details below and I will respond within 24 hours.
+          </p>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name *</label>
+              <input type="text" id="form-name" class="form-control" placeholder="e.g. Alex Mercer" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address *</label>
+              <input type="email" id="form-email" class="form-control" placeholder="e.g. alex@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Subject / Purpose</label>
+              <input type="text" id="form-subject" class="form-control" placeholder="e.g. Internship Opportunity / Collaboration">
+            </div>
+            <div class="form-group">
+              <label for="form-message" class="form-label">Your Message *</label>
+              <textarea id="form-message" class="form-control" placeholder="Tell me about your project, team, or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          © 2026 <b>Tharun S</b>. Engineered with modern HTML, CSS, JavaScript & SaaS Aesthetics.
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/tarun215" target="_blank" rel="noopener" class="icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/tharun-s-38969732b" target="_blank" rel="noopener" class="icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:tarunudupi28@gmail.com" class="icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROJECT DETAIL MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="project-modal-close" aria-label="Close Modal">&times;</button>
+      <div id="project-modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       RESUME VIEWER & DOWNLOAD MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="resume-modal">
+    <div class="modal-box" style="max-width: 900px;">
+      <button class="modal-close-btn" id="resume-modal-close" aria-label="Close Resume Modal">&times;</button>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <span class="project-tag-pill">Curriculum Vitae</span>
+          <h2 style="font-size: 1.85rem; margin-top: 6px;">Tharun S — Resume</h2>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <a href="assets/resume.pdf" download="Tharun_S_Resume.pdf" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-download"></i> Download PDF
+          </a>
+          <a href="assets/resume.pdf" target="_blank" class="btn btn-secondary btn-sm">
+            <i class="fa-solid fa-up-right-from-square"></i> Open in New Tab
+          </a>
+        </div>
+      </div>
+
+      <!-- Embedded PDF or Fallback Preview -->
+      <div style="width: 100%; height: 600px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); background: #1e293b;">
+        <iframe src="assets/resume.pdf" style="width: 100%; height: 100%; border: none;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
